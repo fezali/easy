@@ -1,1 +1,14 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_repeat" id="34" inline="true" x="86" y="122">
+    <value name="TIMES">
+      <block type="math_number" id="200">
+        <field name="NUM">2000</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="multimedia_playwav" id="154">
+        <field name="WAV">beep.w</field>
+      </block>
+    </statement>
+  </block>
+</xml>

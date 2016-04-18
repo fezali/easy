@@ -1,25 +1,45 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="328" inline="true" x="57" y="111">
+  <block type="controls_repeat" id="1" inline="true" x="57" y="111">
     <value name="TIMES">
-      <block type="math_number" id="309">
+      <block type="math_number" id="2">
         <field name="NUM">2</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="278">
+      <block type="led_select" id="24" inline="true">
+        <field name="ACTION">ON</field>
+        <value name="LED">
+          <block type="math_number" id="31">
+            <field name="NUM">5</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="320" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="310">
-                <field name="NUM">3850</field>
+          <block type="led_select" id="15" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="32">
+                <field name="NUM">3</field>
               </block>
             </value>
+            <next>
+              <block type="movement_forward" id="3">
+                <next>
+                  <block type="robot_delay" id="4" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="5">
+                        <field name="NUM">3850</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="338"></block>
+      <block type="movement_stop" id="6"></block>
     </next>
   </block>
 </xml>

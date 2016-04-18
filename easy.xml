@@ -22,20 +22,20 @@
               </block>
             </value>
             <next>
-              <block type="led_select" id="19" inline="true">
+              <block type="led_select" id="7" inline="true">
                 <field name="ACTION">ON</field>
                 <value name="LED">
-                  <block type="math_number" id="26">
+                  <block type="math_number" id="8">
                     <field name="NUM">2</field>
                   </block>
                 </value>
                 <next>
-                  <block type="movement_forward" id="7">
+                  <block type="movement_forward" id="9">
                     <next>
-                      <block type="robot_delay" id="8" inline="true">
+                      <block type="robot_delay" id="10" inline="true">
                         <value name="DELAY">
-                          <block type="math_number" id="9">
-                            <field name="NUM">3850</field>
+                          <block type="math_number" id="11">
+                            <field name="NUM">3750</field>
                           </block>
                         </value>
                       </block>
@@ -49,7 +49,27 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="10"></block>
+      <block type="movement_stop" id="12">
+        <next>
+          <block type="oled_drawtext" id="37">
+            <field name="TEXT">I made it to Schiaparelli</field>
+            <next>
+              <block type="controls_repeat" id="58" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="59">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="multimedia_playwav" id="49">
+                    <field name="WAV">beep.w</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
     </next>
   </block>
 </xml>
